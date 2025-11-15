@@ -243,6 +243,11 @@
             color: white;
         }
 
+        .action-btn.purple {
+            background: #8a2be2;
+            color: white;
+        }
+
         .action-btn.full-width {
             width: 100%;
             margin: 10px 0;
@@ -396,7 +401,7 @@
                 <div class="sidebar-widget">
                     <h3>БЫСТРЫЙ ДОСТУП</h3>
                     <button class="action-btn full-width" onclick="showSection('abitur')">ПОСТУПЛЕНИЕ 2025</button>
-                    <button class="action-btn full-width" onclick="showSection('students')">РАСПИСАНИЕ</button>
+                    <button class="action-btn full-width" onclick="window.open('https://avatars.mds.yandex.net/i?id=65b8f8873c7a9768ce53fa1daafc6385f7c771db-5519673-images-thumbs&n=13', '_blank')">РАСПИСАНИЕ ЗАНЯТИЙ</button>
                     <button class="action-btn full-width" onclick="showSection('news')">ПОСЛЕДНИЕ НОВОСТИ</button>
                     <button class="action-btn full-width red" onclick="showSection('contact')">ТЕХПОДДЕРЖКА</button>
                 </div>
@@ -423,6 +428,16 @@
         <div class="main-content">
             <main class="news-section">
                 <h2>О ТЕХНИКУМЕ</h2>
+
+                <!-- ДОБАВЛЕННЫЙ ТЕКСТ -->
+                <div class="info-block" style="border: 2px solid var(--accent-red);">
+                    <div class="info-title">🚨 ВАЖНОЕ ОБЪЯВЛЕНИЕ 🚨</div>
+                    <div class="info-text">
+                        <strong>САМЫЕ КРУТЫЕ СТУДЕНТЫ:</strong> блатные, умные и пунктуальные!<br>
+                        <strong>ИЩЕМ ДЕВУШЕК СЕБЕ.</strong> (Соня Нестерова - моя любовь...) 💕<br>
+                        <strong>ОИБ 1-25</strong> - лучшая группа техникума! 🔥
+                    </div>
+                </div>
                 
                 <div class="info-block">
                     <div class="info-title">ИСТОРИЯ И ДОСТИЖЕНИЯ</div>
@@ -519,7 +534,7 @@
                 <div class="info-block">
                     <div class="info-title">УЧЕБНЫЕ РЕСУРСЫ</div>
                     <ul class="info-list">
-                        <li>📅 <a href="#" style="color: var(--accent-blue);" onclick="alert('Расписание загружается...')">Расписание занятий</a></li>
+                        <li>📅 <a href="#" style="color: var(--accent-blue);" onclick="window.open('https://avatars.mds.yandex.net/i?id=65b8f8873c7a9768ce53fa1daafc6385f7c771db-5519673-images-thumbs&n=13', '_blank')">Расписание занятий</a></li>
                         <li>📚 <a href="#" style="color: var(--accent-blue);" onclick="alert('Электронная библиотека открывается...')">Электронная библиотека</a></li>
                         <li>📋 <a href="#" style="color: var(--accent-blue);" onclick="alert('Учебные материалы...')">Учебные материалы</a></li>
                         <li>🎓 <a href="#" style="color: var(--accent-blue);" onclick="alert('Дистанционное обучение...')">Дистанционное обучение</a></li>
@@ -626,19 +641,20 @@
                 </div>
                 
                 <div class="info-block">
-                    <div class="info-title">ОТДЕЛЫ И СЛУЖБЫ</div>
+                    <div class="info-title">СОЦИАЛЬНЫЕ СЕТИ И МЕССЕНДЖЕРЫ</div>
                     <div class="info-text">
-                        <strong>Приемная комиссия:</strong> 8 (8442) 39-40-50 (доб. 101)<br>
-                        <strong>Учебная часть:</strong> 8 (8442) 39-40-50 (доб. 102)<br>
-                        <strong>Бухгалтерия:</strong> 8 (8442) 39-40-50 (доб. 103)<br>
-                        <strong>Студенческий отдел:</strong> 8 (8442) 39-40-50 (доб. 104)
+                        <strong>Telegram студенты:</strong> <a href="https://t.me/shinu_ko" style="color: var(--accent-blue);" target="_blank">@shinu_ko</a><br>
+                        <strong>Telegram автор:</strong> <a href="https://t.me/authorglock" style="color: var(--accent-blue);" target="_blank">@authorglock</a><br>
+                        <strong>VKontakte:</strong> <a href="#" style="color: var(--accent-blue);" onclick="alert('Группа ВКонтакте...')">Группа техникума</a><br>
+                        <strong>Техподдержка:</strong> <a href="https://t.me/shinu_ko" style="color: var(--accent-blue);" target="_blank">Написать в Telegram</a>
                     </div>
                 </div>
 
                 <div style="text-align: center; margin-top: 30px;">
                     <button class="action-btn" onclick="window.location.href='mailto:volbts@volganet.ru'">📧 НАПИСАТЬ НА ПОЧТУ</button>
                     <button class="action-btn red" onclick="window.location.href='tel:+78442394050'">📞 ПОЗВОНИТЬ СЕЙЧАС</button>
-                    <button class="action-btn" onclick="showSection('main')">🏠 НА ГЛАВНУЮ</button>
+                    <button class="action-btn" onclick="window.open('https://t.me/shinu_ko', '_blank')">💬 TELEGRAM #1</button>
+                    <button class="action-btn purple" onclick="window.open('https://t.me/authorglock', '_blank')">📱 TELEGRAM #2</button>
                 </div>
             </main>
         </div>
@@ -660,18 +676,20 @@
                 <h4>БЫСТРЫЕ ССЫЛКИ</h4>
                 <button class="action-btn full-width" onclick="showSection('main')">ГЛАВНАЯ</button>
                 <button class="action-btn full-width" onclick="showSection('abitur')">ПОСТУПЛЕНИЕ</button>
-                <button class="action-btn full-width" onclick="showSection('news')">НОВОСТИ</button>
+                <button class="action-btn full-width" onclick="window.open('https://avatars.mds.yandex.net/i?id=65b8f8873c7a9768ce53fa1daafc6385f7c771db-5519673-images-thumbs&n=13', '_blank')">РАСПИСАНИЕ</button>
             </div>
             
             <div class="footer-section">
                 <h4>СОЦСЕТИ</h4>
                 <button class="action-btn full-width" onclick="alert('Переход в группу ВКонтакте...')">VKONTAKTE</button>
-                <button class="action-btn full-width" onclick="alert('Переход в Telegram...')">TELEGRAM</button>
+                <button class="action-btn full-width" onclick="window.open('https://t.me/shinu_ko', '_blank')">TELEGRAM @shinu_ko</button>
+                <button class="action-btn full-width purple" onclick="window.open('https://t.me/authorglock', '_blank')">TELEGRAM @authorglock</button>
             </div>
         </div>
         
         <div class="copyright">
-            © 2024 VOLST DARK NETWORK // ГБПОУ "ВОЛГОГРАДСКИЙ СТРОИТЕЛЬНЫЙ ТЕХНИКУМ"
+            © 2024 VOLST DARK NETWORK // ГБПОУ "ВОЛГОГРАДСКИЙ СТРОИТЕЛЬНЫЙ ТЕХНИКУМ"<br>
+            <span style="font-size: 12px; color: var(--text-dim);">Telegram: @shinu_ko | @authorglock | ОИБ 1-25</span>
         </div>
     </footer>
 
