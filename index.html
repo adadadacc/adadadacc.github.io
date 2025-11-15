@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волгоградский строительный техникум</title>
+    <style>
+        /* СБРОС СТИЛЕЙ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* ШАПКА */
+        .header {
+            background: linear-gradient(135deg, #0055a5 0%, #003366 100%);
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .logo-text h1 {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .logo-text p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .contacts {
+            text-align: right;
+            font-size: 14px;
+        }
+        
+        .phone {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* НАВИГАЦИЯ */
+        .nav {
+            background: #003366;
+            border-top: 1px solid #004488;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            transition: background 0.3s;
+            font-size: 14px;
+            border-right: 1px solid #004488;
+        }
+        
+        .nav-item:hover {
+            background: #004488;
+        }
+        
+        .nav-item:last-child {
+            border-right: none;
+        }
+        
+        /* СЛАЙДЕР */
+        .slider {
+            background: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .slider h2 {
+            color: #003366;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .slider p {
+            color: #666;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        
+        .slider-placeholder {
+            background: #e9ecef;
+            height: 300px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 18px;
+        }
+        
+        /* ОСНОВНОЙ КОНТЕНТ */
+        .main-content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .news-section h3, .sidebar h3 {
+            color: #003366;
+            border-bottom: 2px solid #0055a5;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .news-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .news-date {
+            color: #0055a5;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .news-title {
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .news-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        /* БОКОВАЯ ПАНЕЛЬ */
+        .sidebar-widget {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .links-list {
+            list-style: none;
+        }
+        
+        .links-list li {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .links-list a {
+            color: #0055a5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .links-list a:hover {
+            color: #003366;
+            text-decoration: underline;
+        }
+        
+        /* ПОДВАЛ */
+        .footer {
+            background: #003366;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .footer-section h4 {
+            color: #4d94ff;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #004488;
+            margin-top: 20px;
+            color: #ccc;
+            font-size: 12px;
+        }
+        
+        /* ЗАЩИТА */
+        .protection {
+            display: none;
+        }
+        
+        /* АДАПТИВНОСТЬ */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .nav-item {
+                flex: 1 0 50%;
+                text-align: center;
+                border-right: none;
+                border-bottom: 1px solid #004488;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ЗАЩИТА ОТ КОПИРОВАНИЯ -->
+    <script>
+        // Защита от копирования
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+            alert('Копирование запрещено!');
+        });
+        
+        // Защита от правой кнопки
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('Правая кнопка мыши отключена!');
+        });
+        
+        // Защита от F12
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+                alert('Инструменты разработчика отключены!');
+            }
+        });
+    </script>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <div class="logo-img">[ЛОГОТИП]</div>
+                <div class="logo-text">
+                    <h1>Волгоградский строительный техникум</h1>
+                    <p>Государственное образовательное учреждение</p>
+                </div>
+            </div>
+            <div class="contacts">
+                <div class="phone">+7 (8442) 00-00-00</div>
+                <div class="email">info@volst.ru</div>
+                <div class="address">г. Волгоград, ул. Примерная, 123</div>
+            </div>
+        </div>
+        
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="#" class="nav-item">Главная</a>
+                <a href="#" class="nav-item">О техникуме</a>
+                <a href="#" class="nav-item">Абитуриенту</a>
+                <a href="#" class="nav-item">Студенту</a>
+                <a href="#" class="nav-item">Преподавателю</a>
+                <a href="#" class="nav-item">Новости</a>
+                <a href="#" class="nav-item">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- СЛАЙДЕР -->
+    <section class="slider">
+        <h2>Добро пожаловать в Волгоградский строительный техникум</h2>
+        <p>Ведущее образовательное учреждение в сфере строительства и архитектуры</p>
+        <div class="slider-placeholder">
+            [СЛАЙДЕР С ФОТОГРАФИЯМИ]
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <div class="main-content">
+        <main class="news-section">
+            <h3>Последние новости</h3>
+            
+            <div class="news-item">
+                <div class="news-date">25.12.2024</div>
+                <div class="news-title">День открытых дверей</div>
+                <div class="news-text">Приглашаем всех желающих на день открытых дверей, который состоится 15 января 2025 года...</div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-date">20.12.2024</div>
+                <div class="news-title">Завершение учебного семестра</div>
+                <div class="news-text">Учебный семестр завершается 28 декабря. Студентов ждут зачеты и экзамены...</div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-date">15.12.2024</div>
+                <div class="news-title">Строительная олимпиада</div>
+                <div class="news-text">Наши студенты заняли призовые места в региональной строительной олимпиаде...</div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-date">10.12.2024</div>
+                <div class="news-title">Новые лаборатории</div>
+                <div class="news-text">В техникуме открылись новые современные лаборатории строительных материалов...</div>
+            </div>
+        </main>
+        
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>Быстрые ссылки</h3>
+                <ul class="links-list">
+                    <li><a href="#">Расписание занятий</a></li>
+                    <li><a href="#">Электронная библиотека</a></li>
+                    <li><a href="#">Студенческий совет</a></li>
+                    <li><a href="#">Трудоустройство</a></li>
+                    <li><a href="#">Дистанционное обучение</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>Объявления</h3>
+                <ul class="links-list">
+                    <li><a href="#">Вакансии для преподавателей</a></li>
+                    <li><a href="#">Конкурс на стипендию</a></li>
+                    <li><a href="#">Ремонтные работы</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>Документы</h3>
+                <ul class="links-list">
+                    <li><a href="#">Устав техникума</a></li>
+                    <li><a href="#">Лицензия</a></li>
+                    <li><a href="#">Аккредитация</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <div class="footer-links">
+                    <a href="#">Адрес: г. Волгоград, ул. Примерная, 123</a>
+                    <a href="tel:+78442000000">Телефон: +7 (8442) 00-00-00</a>
+                    <a href="mailto:info@volst.ru">Email: info@volst.ru</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Образование</h4>
+                <div class="footer-links">
+                    <a href="#">Специальности</a>
+                    <a href="#">Поступление</a>
+                    <a href="#">Расписание</a>
+                    <a href="#">Экзамены</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Дополнительно</h4>
+                <div class="footer-links">
+                    <a href="#">Воспитательная работа</a>
+                    <a href="#">Спортивная жизнь</a>
+                    <a href="#">Библиотека</a>
+                    <a href="#">Архив</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2024 Волгоградский строительный техникум. Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>
